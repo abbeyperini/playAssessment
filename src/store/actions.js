@@ -15,7 +15,6 @@ export const actions = {
 }
 
 function fetchEvents(key, timeString) {
-    console.log(timeString)
     return dispatch => {
         dispatch(loading())
         services.fetchEvents(key, timeString)

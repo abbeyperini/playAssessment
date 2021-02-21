@@ -14,8 +14,15 @@ p {
   background-color: var(--primary);
 }
 
+.details-heading {
+  justify-content: space-around;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
 header {
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .events, .details {
@@ -53,7 +60,7 @@ header {
   .events, .details {
     display: flex;
     flex-direction: column;
-    overflow-x: none;
+    overflow-x: inherit;
   }
 
   .event-item p {
