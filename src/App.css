@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+label, select, input {
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 0px 10px 0px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.details-heading, header, .event-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  background-color: var(--primary);
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.events, .details {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.events > li:nth-of-type(odd) {
+  background-color: var(--accent);
+}
+
+.event-item p {
+  width: 150px;
+  padding: 20px;
+}
+
+.details-heading p {
+  padding: 10px;
+}
+
+.keyP {
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 900px) {
+  p {
+    margin: 10px 0px 10px 0px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .details-heading, header, .event-item {
+    flex-direction: row;
+  }
+
+  .events, .details {
+    display: flex;
+    flex-direction: column;
+    overflow-x: none;
+  }
+
+  .event-item p {
+    width: 100%;
   }
 }
